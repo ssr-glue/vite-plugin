@@ -1,0 +1,43 @@
+{
+  "name": "@ssr-glue/vite-plugin",
+  "author": "yaquawa",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "The Vite plugin for SSR-Glue",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "rm -rf dist && tsup src/index.ts --sourcemap --dts --format cjs,esm",
+    "prepublishOnly": "npm run build",
+    "release": "npx git-ensure -a && npx bumpp --commit --tag --push"
+  },
+  "dependencies": {
+    "vite": "^2.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "ssr-glue": "^1.0.7",
+    "@ssr-glue/server-libs": "^1.0.7"
+  },
+  "peerDependencies": {
+    "@vue/server-renderer": "^3.0.11",
+    "@vueuse/head": "^0.5.1",
+    "vue": "^3.0.11",
+    "vue-router": "^4.0.5"
+  }
+}
