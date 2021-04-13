@@ -1,7 +1,7 @@
 {
   "name": "@ssr-glue/vite-plugin",
   "author": "yaquawa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "The Vite plugin for SSR-Glue",
   "main": "dist/index.js",

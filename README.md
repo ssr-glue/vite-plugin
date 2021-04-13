@@ -235,7 +235,7 @@ For example:
 {
   "scripts": {
     "dev": "vite",
-    "dev:spa": "cross-env SPA_MODE=true vite"
+    "dev:spa": "cross-env VITE_SPA_MODE=true vite"
   }
 }
 ```
