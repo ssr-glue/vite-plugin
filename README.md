@@ -11,10 +11,19 @@
 </div>
 
 ## Main Features
-- [x] Extendable via plugins
+- [x] Tiny core, extendable via a plugin architecture
 - [x] Vite Dev server in SSR mode 
 - [ ] Multi-Page App
 - [ ] Serverless template building
+
+## Table of Contents
+- [Installation](#installation)
+    * [Config the Plugin](#config-the-plugin)
+    * [Server Entry Script](#server-entry-script)
+- [An Example for Vue.js](#an-example-for-vuejs)
+- [Building for Production](#building-for-production)
+- [Multi-Page App](#multi-page-app)
+- [Contribution](#contribution)
 
 ## Installation
 ```shell
@@ -140,8 +149,9 @@ used for rendering the meta tags, html/body attributes(see [vueuse/head](https:/
 
 Also note that the order of the plugin matters, make sure you put `ssr-glue-plugin-server-vue-usehead` after `ssr-glue-plugin-server-vue`. 
 
-As the example shows, you should pass the `App` component(your root component of your app) and the routes to the plugin,
+As the example shows, you should pass the `App` component(your root component of your app) and the `routes` to the plugin,
 then the plugin will create the app and router on behalf of you.  
+Here we are generating the routes ourselves, but you really should delegate the task to another plugin like [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages).
 If you want to access the created app instance, you could pass a callback like this:
 
 ```js
@@ -263,6 +273,7 @@ As for how to use the built assets, it's out of topic, but you can see a full ex
 
 ## Multi-Page App
 Waiting for bugfix in Vite...
+
 
 ## Contribution
 Contribution are always welcomed, feel free to send PRs 🖐🏼
