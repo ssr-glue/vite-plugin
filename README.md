@@ -148,7 +148,7 @@ If you want to access the created app instance, you could pass a callback like t
 vueAppPlugin({
   app: App,
   routes,
-  appCreated(app){
+  onAppCreated(app){
     // app.use(...)
     // app.component(...)
   }
