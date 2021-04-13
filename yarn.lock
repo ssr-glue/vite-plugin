@@ -59,20 +59,20 @@
     fastq "^1.6.0"
 
 "@ssr-glue/client-libs@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@ssr-glue/client-libs/-/client-libs-1.0.7.tgz#f56a6e4d30e93269ed1d8157288f3e2db14c3473"
-  integrity sha512-gy8EzXNK0WLfjG9uyTtKpP5j0RVKgFFro1dzbRVTJe2xdOc2qyuAJvHj/Eo/lx/xr7AQbH61A3gzlYTgPtcl3A==
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@ssr-glue/client-libs/-/client-libs-1.0.8.tgz#0d07532a99be7ac98e6a290d004bd2e0a31d4d4c"
+  integrity sha512-22Is6z86Rxw2Bwep4Oqrwr3bpULgqiNyxYDc1krLX9OedOsCPgazOi/XhdmQGJn8n49mtcEBxjCOeOHeVT4pSg==
   dependencies:
     EventDispatcher "^3.0.0"
-    ssr-glue "^1.0.7"
+    ssr-glue "^1.0.8"
 
-"@ssr-glue/server-libs@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@ssr-glue/server-libs/-/server-libs-1.0.7.tgz#7f5f07dc458e2ac145b6cda8ef3c4d33fc7c308a"
-  integrity sha512-hyo/TJJtF5AECXzRnGmR3VzAl8ON9W5ZIVeia1qqlBsD1IqoA4sjw40/1l2KIKU+9ma7LTHy+MNMNIdTxZDyYQ==
+"@ssr-glue/server-libs@^1.0.7", "@ssr-glue/server-libs@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@ssr-glue/server-libs/-/server-libs-1.0.8.tgz#aedb4106768ffbe2ae160a7e4c34a74ba260094d"
+  integrity sha512-7WvRVjw5wkKgK6MCfpXLWa6Ipp8kxCtvIxySzOfATWsEdC85S+/3Rsy872eRtEXyU4wAjGv6BYJRnRyb6HquOA==
   dependencies:
     EventDispatcher "^3.0.0"
-    ssr-glue "^1.0.7"
+    ssr-glue "^1.0.8"
 
 "@types/body-parser@*":
   version "1.19.0"
@@ -1478,38 +1478,38 @@ sourcemap-codec@^1.4.4:
   resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
   integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
 
-ssr-glue-plugin-client-vue-usehead@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/ssr-glue-plugin-client-vue-usehead/-/ssr-glue-plugin-client-vue-usehead-1.0.4.tgz#9e64620f1ecf40b1ef62e2dfdc014295d3d0b1d8"
-  integrity sha512-E7DVhAvpDJ14SsA6uAJl0hAG9ghUT7Lhh/2CuKAmA29QgN3QMYm11D6LWNV7c0GI/3CM8VPT19rCtSg9SW+ROw==
+ssr-glue-plugin-client-vue-usehead@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/ssr-glue-plugin-client-vue-usehead/-/ssr-glue-plugin-client-vue-usehead-1.0.6.tgz#e7c0889d368f8231311611b73c67e1cf7e564522"
+  integrity sha512-+mhfkcQpBNvHgw/VYWzAv7kxqg51GVNPdsJKP5k8ISszjnXKub3JbTOIbaACa7gb0e5ZzJlZnsG/1yk6TLcH7w==
   dependencies:
     "@ssr-glue/client-libs" "^1.0.7"
 
-ssr-glue-plugin-client-vue@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/ssr-glue-plugin-client-vue/-/ssr-glue-plugin-client-vue-1.0.4.tgz#410c4661aa197f3a81db8f2bc7369bbbae4d0d87"
-  integrity sha512-Vj5nKiD6ObgUbAmk0OgtcXqoJ3Tj3UOAWkKsv7g6QPTWRjUZOr4KQvfW59WCnQDvk22AUlvNZF+4nFxY1kgftA==
+ssr-glue-plugin-client-vue@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/ssr-glue-plugin-client-vue/-/ssr-glue-plugin-client-vue-1.0.6.tgz#fbe40fe0e070cc662b929cc6e68590c25f3dd3a2"
+  integrity sha512-LqCsfO20IfaGM23Yedz9i/faX6r05GY2iWx2hlHovK3cDHixOEansxXMXBzzIgVmir5EXrW+uBFBQ+0KjljJGQ==
   dependencies:
     "@ssr-glue/client-libs" "^1.0.7"
 
-ssr-glue-plugin-server-vue-usehead@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/ssr-glue-plugin-server-vue-usehead/-/ssr-glue-plugin-server-vue-usehead-1.0.5.tgz#c1415be8ab8bc09b7772f654eebfeffb84f08fe7"
-  integrity sha512-06sgzXkHOtIazSNO9+abzQ3umgfDiDl1m3d3Gkr36A/YDtswqSAztP0v9vrdwtxiNJVwhhzDM3osMRxhS1gENQ==
+ssr-glue-plugin-server-vue-usehead@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/ssr-glue-plugin-server-vue-usehead/-/ssr-glue-plugin-server-vue-usehead-1.0.6.tgz#4eb34a0b3e46bec6ac1e0e2bdfc6fc253b29b535"
+  integrity sha512-YAAMDCNzJ4YCYnlsBVOgBoPZiqkZQPWZGbSGUYO4E2fPWLKd7rFwyLHu36H56Mdd1UtkoWc1u9ZVbL8wqdFX5w==
   dependencies:
     "@ssr-glue/server-libs" "^1.0.7"
 
-ssr-glue-plugin-server-vue@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/ssr-glue-plugin-server-vue/-/ssr-glue-plugin-server-vue-1.0.5.tgz#55f20e713c6f7034a61786eba1579968799420de"
-  integrity sha512-t67L86pXwkbqrbW2ElUeq1FRGH95IV7pdDIX/xTp80Ok/42gjBxFXgxQONldN//dwyNudKESpn2qh1wlrxqNyA==
+ssr-glue-plugin-server-vue@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/ssr-glue-plugin-server-vue/-/ssr-glue-plugin-server-vue-1.0.6.tgz#e239fedb25a5f97cc38939af06d467bbcfd26d0a"
+  integrity sha512-rAHfyj71Hn76GESslZn6mVgpTYHptzs/MGMoy25pXQ0AyjpaMwOz+EZlFLYDLTFan2lZRNjTS4oW0BRbe52DsQ==
   dependencies:
     "@ssr-glue/server-libs" "^1.0.7"
 
-ssr-glue@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/ssr-glue/-/ssr-glue-1.0.7.tgz#e096ba949b4f9addc5963c03ee1eee2ddb0568f4"
-  integrity sha512-RMUr8HRjAAdl/fi3xpigus4pDSqPxWfSNGdPXQO2LuFukP+Mr5Y5Qxo6WWniOZ0DIEPwDKblj7q1k7R4HpwXew==
+ssr-glue@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/ssr-glue/-/ssr-glue-1.0.8.tgz#7b2dfbf2e3383c71725422d997781e832c86b5e9"
+  integrity sha512-jGKy5+5bvtg35HObCOcnJbtuUBa7L/NkVT1Wv1NyZ9SHauRjh5Owb16V+ZkMzRjTrV+fsj2p+lEve2M/dtx7Aw==
   dependencies:
     EventDispatcher "^3.0.0"
 
@@ -1529,9 +1529,9 @@ strip-final-newline@^2.0.0:
   integrity sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
 
 sucrase@^3.17.1:
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/sucrase/-/sucrase-3.18.0.tgz#66b2481e0458ecb74a5a4a644f45fe1bb33235f0"
-  integrity sha512-6R3iX5pwyAFMLsM2kU4Rhc7EwODCTee8ySWM9UwqARDClO/QdQDVAWaioElx0o7u9w/76Xulz5Q1jseBp+YuRw==
+  version "3.18.1"
+  resolved "https://registry.yarnpkg.com/sucrase/-/sucrase-3.18.1.tgz#7c699d5148734b1105542ca4ea2aa69bcab7f728"
+  integrity sha512-TRyO38wwOPhLLlM8QLOG3TgMj0FKk+arlTrS9pRAanF8cAcHvgRPKIYWGO25mPSp/Rj87zMMTjFfkqIZGI6ZdA==
   dependencies:
     commander "^4.0.0"
     glob "7.1.6"

@@ -52,7 +52,7 @@ export function ViteSSRPlugin(userOptions: Partial<PluginOptions> = {}): Plugin 
           scriptPath = scriptPathTs
         } else {
           throw new Error(
-            `Couldn't find default server entry script at '${viteConfig.root}/src/main.(js|ts)'.`
+            `Couldn't find default server entry script at '${viteConfig.root}/src/main-server.(js|ts)'.`
           )
         }
 
@@ -76,13 +76,25 @@ export function ViteSSRPlugin(userOptions: Partial<PluginOptions> = {}): Plugin 
         return
       }
 
-      if (process.env.SPA_MODE) {
+      if (process.env.VITE_SPA_MODE) {
         return
       }
 
       viteDevServer.moduleGraph.invalidateAll()
 
-      const serverApp = (await viteDevServer.ssrLoadModule(entryScript)).default as ServerSideApplication
+      const serverAppBuilder = (await viteDevServer.ssrLoadModule(entryScript)).default
+
+      if (typeof serverAppBuilder !== 'function') {
+        throw new Error(`The default export of ${entryScript} should be a function.`)
+      }
+
+      const serverApp = serverAppBuilder()
+
+      if (!isServerSideApplication(serverApp)) {
+        throw new Error(
+          `The return value of ${entryScript} should be an instance of 'ServerSideApplication' class.`
+        )
+      }
 
       await serverApp.boot()
 
@@ -101,4 +113,12 @@ export function ViteSSRPlugin(userOptions: Partial<PluginOptions> = {}): Plugin 
       }
     },
   }
+}
+
+function isServerSideApplication(value: any): value is ServerSideApplication {
+  if (typeof value !== 'object') {
+    return false
+  }
+
+  return 'boot' in value && 'render' in value
 }

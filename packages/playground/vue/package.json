@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "dev:spa": "cross-env SPA_MODE=true vite",
+    "dev:spa": "cross-env VITE_SPA_MODE=true vite",
     "serve": "vite preview",
     "build": "yarn run build:client && yarn run build:server",
     "build:client": "vite build --outDir dist/client",
@@ -15,10 +15,10 @@
     "@vue/compiler-sfc": "^3.0.11",
     "@vue/server-renderer": "^3.0.11",
     "@vueuse/head": "^0.5.1",
-    "ssr-glue-plugin-client-vue": "^1.0.4",
-    "ssr-glue-plugin-client-vue-usehead": "^1.0.4",
-    "ssr-glue-plugin-server-vue": "^1.0.5",
-    "ssr-glue-plugin-server-vue-usehead": "^1.0.5",
+    "ssr-glue-plugin-client-vue": "^1.0.6",
+    "ssr-glue-plugin-client-vue-usehead": "^1.0.6",
+    "ssr-glue-plugin-server-vue": "^1.0.6",
+    "ssr-glue-plugin-server-vue-usehead": "^1.0.6",
     "vue": "^3.0.11",
     "vue-router": "^4.0.5"
   },

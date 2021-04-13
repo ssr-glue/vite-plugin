@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolvePath } from './utils'
-import SSRGluePlugin from '@ssr-glue/vite-plugin-ssr'
+import SSRGluePlugin from '@ssr-glue/vite-plugin'
 
 export default defineConfig({
   plugins: [

@@ -6,14 +6,14 @@ import { useHeadPlugin } from 'ssr-glue-plugin-server-vue-usehead'
 
 const routes = generateRoutesFromPages()
 
-const app = new ServerSideApplication({
-  plugins: [
-    vueAppPlugin({
-      app: App,
-      routes,
-    }),
-    useHeadPlugin(),
-  ],
-})
-
-export default app
+export default function ServerSideApplicationBuilder() {
+  return new ServerSideApplication({
+    plugins: [
+      vueAppPlugin({
+        app: App,
+        routes,
+      }),
+      useHeadPlugin(),
+    ],
+  })
+}

@@ -100,17 +100,17 @@ import { useHeadPlugin } from 'ssr-glue-plugin-server-vue-usehead'
 
 const routes = generateRoutesFromPages()
 
-const app = new ServerSideApplication({
-  plugins: [
-    vueAppPlugin({
-      app: App,
-      routes,
-    }),
-    useHeadPlugin(),
-  ],
-})
-
-export default app
+export default function ServerSideApplicationBuilder() {
+  return new ServerSideApplication({
+    plugins: [
+      vueAppPlugin({
+        app: App,
+        routes,
+      }),
+      useHeadPlugin(),
+    ],
+  })
+}
 ```
 
 ```ts
@@ -132,7 +132,7 @@ export function generateRoutesFromPages() {
 
 Here, two things you may have noticed:
 
-1. The default exported object is an instance of `ServerSideApplication`  
+1. The default exported object is a function that returns an instance of `ServerSideApplication`  
 2. We're using 2 ssr-glue plugins: `ssr-glue-plugin-server-vue` and `ssr-glue-plugin-server-vue-usehead`
 
 `ssr-glue-plugin-server-vue` is used for rendering the Vue.js app, in addition, `ssr-glue-plugin-server-vue-usehead` is
@@ -186,7 +186,7 @@ For instance:
 * `ServerSideApplication` ---> `ClientSideApplication`
 * `ssr-glue-plugin-server-vue` ---> `ssr-glue-plugin-client-vue`
 
-One more difference is that the server entry script export a default `ServerSideApplication` instance, whereas
+One more difference is that the server entry script export a default function that returns an `ServerSideApplication` instance, whereas
 the client entry script does not, instead it calls the `boot` method of the `ClientSideApplication`.
 
 Why? Because `ClientSideApplication` is going to run immediately on the browser, whereas `ServerSideApplication`
@@ -239,7 +239,6 @@ For example:
   }
 }
 ```
-
 
 ## Building for Production
 In addition to the normal build, you are also going to build for the server entry script.  
