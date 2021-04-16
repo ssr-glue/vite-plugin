@@ -258,7 +258,7 @@ Our scripts in `package.json` would be something look like this:
 {
   "scripts": {
     "dev": "vite",
-    "build": "build:client && build:server",
+    "build": "yarn build:client && yarn build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --outDir dist/server --ssr src/main-server.ts"
   }

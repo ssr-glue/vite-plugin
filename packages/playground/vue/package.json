@@ -6,7 +6,7 @@
     "dev": "vite",
     "dev:spa": "cross-env VITE_SPA_MODE=true vite",
     "serve": "vite preview",
-    "build": "yarn run build:client && yarn run build:server",
+    "build": "yarn build:client && yarn build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --outDir dist/server --ssr src/main-server.ts",
     "startServer": "ts-node server.ts"

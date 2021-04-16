@@ -2,7 +2,7 @@ import compression from 'compression'
 import serveStatic from 'serve-static'
 import express, { Express } from 'express'
 import { pathToRegexp } from 'path-to-regexp'
-import serverSideApplication from './dist/server/main-server'
+import ServerSideApplicationBuilder from './dist/server/main-server'
 import { cleanUrl, readFile, resolvePath } from './utils'
 
 const routes = [
@@ -29,6 +29,7 @@ function resolveTemplate(path: string): string | undefined {
 }
 
 async function createServer(): Promise<Express> {
+  const serverSideApplication = ServerSideApplicationBuilder()
   await serverSideApplication.boot()
 
   const server = express()
